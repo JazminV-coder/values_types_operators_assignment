@@ -181,15 +181,17 @@ Write a step-by-step evaluation for the following expression: `'ca' + 'ter' + 'p
 ## Problem Nine
 
 Write a step-by-step evaluation for the following expression: `2 * 4 === 8 && 'car' + 'pool' === 'carpool'`.
-// 2 * 4 === 8 && car + pool === carpool
-// 8 === 8 && car + pool === carpool
-// 8 = 8 && car + pool === carpool
-// 8 = 8 && carpool === carpool
+// 2 * 4 === 8 && 'car' + 'pool' === 'carpool'
+// 8 === 8 && car + pool === 'carpool'
+// true && 'car'+ 'pool' === 'carpool'
+// true && 'carpool' === 'carpool'
+// true && true
+// true
 
 ## Problem Ten
 
 Write a step-by-step evaluation for the following expression: `'1' + '2' + '3' - '1'`.
-// 1 + 2 + 3 - 1
-// 3 + 3 - 1
-// 6 - 1 
-// 5
+// '1' + '2' + '3' - '1'
+// '12' + '3' - '1'
+// '123' - '1'
+// 122
