@@ -1,4 +1,4 @@
-[![Pursuit Logo](https://avatars1.githubusercontent.com/u/5825944?s=200&v=4)](https://pursuit.org)
+![Pursuit Logo](https://avatars1.githubusercontent.com/u/5825944?s=200&v=4)](https://pursuit.org)
 
 # Values, Types & Operators
 
@@ -49,23 +49,43 @@ What are the types of the following expressions and what do they evaluate to?
 
 ```js
 17
-
+// number
+// 17
 1 + 2 * 3 + 4
-
+// number
+// 64
+// 1 + 2 * 3 + 4
 800 / 80 / 8
+// boolean
+// NaN
+// 800 / 80 / 8
 
 400 > 200
+// boolean
+// false
+// 400 > 200
 
 1 !== 1
+// boolean
+// true
+// 1 !== 1
 
 true || false
-
+// boolean
+// true
+// true || false
 true && false
-
+// boolean
+// false
+// true && false
 20 % 6
+// 2
+// 20 % 6
 
 "a" + "b"
-
+// string
+// 'ab'
+// "a" + "b"
 ```
 
 ## Problem Two
@@ -74,12 +94,19 @@ What will the following return?
 
 ```js
 typeof 4
+// number
+// 4
 
 typeof "hello"
-
+// string
+// "hello"
 typeof true
+// boolean
+// true
 
 2 === 1 || 3 === 4
+// false
+// boolean
 
 ```
 
@@ -91,10 +118,10 @@ For reference, here is a truth table for the expression A && B. You can fill ou
 
 | A     | B     | A && B |  A ll B   |
 | ----- | ----- | ------ | ---------- |
-| true  | true  | true   |      |
-| false | true  | false  |      |
-| true  | false | false  |      |
-| false | false | false  |      |
+| true  | true  | true   |     true
+| false | true  | false  |     true
+| true  | false | false  |     true
+| false | false | false  |    false   
 
 ## Problem Four
 
@@ -104,17 +131,22 @@ For reference, here is a truth table for the expression A && !B. You can fill o
 
 | A     | B     | !B    | A && !B | !A && !B |
 | ----- | ----- | ----- | ------- | -------- |
-| true  | true  | false | false   |          |
-| false | true  | false | false   |          |
-| true  | false | true  | true    |          |
-| false | false | true  | false   |          |
+| true  | true  | false | false   |     true
+| false | true  | false | false   |     false
+| true  | false | true  | true    |     false
+| false | false | true  | false   |     true
 
 ## Problem Five
 
 Create a truth table for the expression !(A || B).
 
+| A     |   B   |   !B  | A && !B| !(A  ||  B)|
+|-------|-------|-------|--------|------------|
+| true  | false | true  |   true |   false    |
+| false | true  | false |  false |   false    |
+| false | false | true  |  false |   true     |
+|  true | true  | false | false  |   false    |
 ## Problem Six
-
 Write a step-by-step evaluation for the following expression ([remember order of operations](https://www.mathsisfun.com/operation-order-pemdas.html)): `2 + 3 * 2 + 1`.
 For reference, here is a exp of a step-by-step evaluation:
 
@@ -124,19 +156,40 @@ For reference, here is a exp of a step-by-step evaluation:
 6 + 4
 10
 ```
+// 3 * 2 
+// 2 + 6 + 1
+// 8 + 1
+// 9
 
 ## Problem Seven
 
 Write a step-by-step evaluation for the following expression (remember order of operations): `4 / 2 + 8 / 4`.
 
+// 4 / 2 
+// 2 + 8 / 4
+// 2 + 2
+// 4
+
 ## Problem Eight
 
 Write a step-by-step evaluation for the following expression: `'ca' + 'ter' + 'pi' + 'llar'`.
+// ca + ter + pi + llar
+// cater + pi + llar
+// cater + pillar
+// caterpillar
 
 ## Problem Nine
 
 Write a step-by-step evaluation for the following expression: `2 * 4 === 8 && 'car' + 'pool' === 'carpool'`.
+// 2 * 4 === 8 && car + pool === carpool
+// 8 === 8 && car + pool === carpool
+// 8 = 8 && car + pool === carpool
+// 8 = 8 && carpool === carpool
 
 ## Problem Ten
 
 Write a step-by-step evaluation for the following expression: `'1' + '2' + '3' - '1'`.
+// 1 + 2 + 3 - 1
+// 3 + 3 - 1
+// 6 - 1 
+// 5
